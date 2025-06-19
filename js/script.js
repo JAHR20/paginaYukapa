@@ -19,12 +19,12 @@ document.querySelectorAll('.btn').forEach(function(button){
 
 // funcion para el boton 'pedido'
 document.getElementById('btn-pedido').addEventListener('click', function(){
-    alert('¡Contactando con desarrollador espere un momento!')
+    alert('¡Contactando con personal!')
 })
 
 // funcion para el boton 'promocion'
 document.getElementById('btn-promocion').addEventListener('click', function(){
-    alert('¡redirigiendo a la promoción!')
+    alert('¡redirigiendo a la promoción, espere por favor!')
 })
 
 
@@ -112,3 +112,17 @@ var typed = new Typed('#typed', {
     loop: "true",
     backSpeed: 20,
 });
+
+
+// js/script.js
+const correoBtn = document.getElementById('correo-btn');
+const esMovil = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (correoBtn) {
+  if (esMovil) {
+    correoBtn.href = "mailto:bioyucapa@gmail.com";
+  } else {
+    correoBtn.href = "https://mail.google.com/mail/?view=cm&to=bioyucapa@gmail.com";
+    correoBtn.target = "_blank";
+  }
+}

@@ -14,7 +14,7 @@
 }
 
 :root {
-    --text-color: #f2f3f5;
+    --text-color: #f1efef;
     /* Gris muy oscuro (casi negro elegante) */
     --bg-color: #98b4f3;
     /* Azul cielo muy claro, casi blanco */
@@ -71,6 +71,16 @@ header.sticky {
     font-weight: bold;
 }
 
+.logo-img {
+    width: 130px;
+    /* o el tamaño que desees */
+    height: auto;
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-top: 8px;
+    border-radius: 50%;
+}
+
 span {
     color: var(--text-color);
 }
@@ -80,10 +90,11 @@ span {
 }
 
 .navbar a {
-    color: var(--text-color);
+    color: rgb(175, 91, 201);
     margin: 15px 20px;
     padding: 10px;
     font-size: 17px;
+    font-weight: bold;
 }
 
 div a {
@@ -92,7 +103,7 @@ div a {
 
 .navbar a:hover {
     color: var(--hover-color);
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid #4095ac;
 }
 
 .h-derecha {
@@ -101,15 +112,16 @@ div a {
 }
 
 .h-derecha a:first-child {
-    color: var(--text-color);
+    color: rgb(175, 91, 201);
     font-size: 17px;
+    font-weight: bold;
     margin-right: 20px;
 }
 
 .h-derecha a {
     vertical-align: middle;
     font-size: 30px;
-    color: var(--text-color);
+    color: rgb(175, 91, 201);
     margin-right: 18px;
     margin-left: 5px;
     transition: 0.5s ease all;
@@ -154,6 +166,7 @@ section {
     transition: opacity 1s ease-in-out;
     z-index: 0;
     opacity: 0;
+    filter: brightness(0.5);
 }
 
 .bg1 {
@@ -168,7 +181,7 @@ section {
     position: relative;
     z-index: 1;
     padding-left: 5vw;
-    color: white;
+    color: rgb(211, 211, 211);
 }
 
 .home-text-JAHR h1 {
@@ -190,9 +203,10 @@ section {
 .home-text-JAHR h5 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: var(--bg-color);
+    color: #01c8ffab;
     text-transform: uppercase;
     letter-spacing: 10px;
+    font-weight: bold;
 }
 
 .btn {
@@ -325,49 +339,56 @@ section {
 }
 
 .footer-jahr {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  background-color: #111;
-  color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #111;
+    color: white;
 }
 
 .footer-img img {
-  max-width: 300px;
-  border-radius: 10px;
+    height: 200px;
+    /* altura fija */
+    width: 400px;
+    /* ancho fijo */
+    object-fit: cover;
+    /* cubre el contenedor recortando la imagen */
+    object-position: center 65%;
+    /* centra la parte visible */
+    border-radius: 10px;
 }
 
 .footer-contact-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-title {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .footer-contact-columns {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-column {
-  text-align: center;
+    text-align: center;
 }
 
 .footer-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  display: inline-block;
-  margin: 0.3rem 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0.3rem 0;
 }
 
 
@@ -495,13 +516,14 @@ section {
 
 .carousel-container {
     position: relative;
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     margin: auto;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    height: 600px; /* 👈 reduce el alto aquí */
+    height: 350px;
+    /* 👈 reduce el alto aquí */
 }
 
 .product-container {
@@ -559,56 +581,58 @@ section {
 }
 
 .product-section {
-  padding: 70px 15% 60px;
-  background: #f8fafc; /* color claro de fondo opcional */
-  color: #111827; /* texto más oscuro */
+    padding: 70px 15% 60px;
+    background: #f8fafc;
+    /* color claro de fondo opcional */
+    color: #111827;
+    /* texto más oscuro */
 }
 
 .product-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
 }
 
 .product-image img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .product-info h2 {
-  font-size: 2.5rem;
-  color: var(--main-color);
-  margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
 }
 
 .product-info p {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
 .product-info ul {
-  list-style: none;
-  margin-bottom: 20px;
+    list-style: none;
+    margin-bottom: 20px;
 }
 
 .product-info li {
-  margin-bottom: 10px;
-  font-size: 1rem;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 .product-info .btn {
-  background-color: var(--main-color);
-  color: white;
-  padding: 12px 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: 0.3s ease;
+    background-color: var(--main-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
 }
 
 .product-info .btn:hover {
-  background-color: var(--hover-color);
+    background-color: var(--hover-color);
 }
 
 
@@ -620,11 +644,23 @@ section {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 5%;
+        padding: 10px 10px;
     }
 
     .logo {
         font-size: 28px;
+    }
+
+    .logo-img {
+        width: 60px;
+        height: auto;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .social-mobile a:first-child {
+        font-size: 20px;
+        /* o 12px si lo quieres más pequeño */
     }
 
     /* Ocultamos las redes dentro del header */
@@ -636,7 +672,7 @@ section {
     #menu-icon {
         display: block;
         font-size: 30px;
-        color: var(--text-color);
+        color: rgb(175, 91, 201);
         cursor: pointer;
     }
 
@@ -686,8 +722,9 @@ section {
     .navbar a {
         color: var(--text-color);
         font-size: 1.5rem;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
+
 
     .social-mobile {
         display: flex;
@@ -696,27 +733,31 @@ section {
         padding: 10px 0;
         background-color: transparent;
         position: absolute;
-        top: 100px;
+        top: 145px;
         left: 0;
         width: 100%;
         z-index: 5;
     }
 
     .social-mobile a i {
-        color: white;
-        font-size: 26px;
+        color: rgb(175, 91, 201);
+        font-size: 30px;
 
     }
-
+    
     .social-mobile a {
-        color: white;
-        font-size: 26px;
+        color: rgb(175, 91, 201);
+        font-size: 30px;
+        
     }
+    
 
-    .social-mobile a:hover i {
+    .social-mobile a:active i {
         color: var(--hover-color);
         transform: translateY(-3px);
     }
+
+    
 
     /* Ajustes de fuentes */
     :root {
@@ -779,16 +820,105 @@ section {
         text-align: center;
     }
 
+    .about-section {
+        width: 100%;
+        max-width: 800px;
+        /* o el ancho que quieras */
+        margin: 0 auto;
+        /* centrarlo horizontalmente */
+        padding: 40px 20px;
+        box-sizing: border-box;
+        background-color: white;
+        /* si quieres que el fondo sea blanco */
+    }
+
     .about-container {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 100%;
+        /* evita overflow */
+        overflow-x: hidden;
+    }
+
+    .about-text,
+    .about-image {
+        flex: 1 1 100%;
+        /* que ocupen todo el ancho */
+        max-width: 100%;
+        /* limita ancho máximo */
+        box-sizing: border-box;
+    }
+
+    .about-text h2,
+    .about-text p,
+    .valores-lista li {
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        /* para evitar que texto largo cause overflow */
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto !important;
+        max-height: 400px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        display: block;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+        /* 👉 una sola columna */
+        gap: 2rem;
+    }
+
+    .carousel-container {
+        height: 100%;
+        /* reduce la altura del carrusel en móviles */
+    }
+
+    .carousel-controls {
+        top: 40%;
+        /* ajusta la posición de los botones */
+    }
+
+    .product-info h2 {
+        font-size: 2rem;
+        /* texto más pequeño */
         text-align: center;
     }
 
-    .about-text h2 {
-        font-size: 2rem;
+    .product-info p,
+    .product-info li {
+        font-size: 1rem;
+        text-align: center;
     }
 
-    .about-text p {
-        font-size: 1rem;
+    .product-info ul {
+        padding-left: 0;
     }
+
+    .product-info .btn {
+        display: block;
+        margin: 20px auto 0;
+        width: fit-content;
+        padding: 10px 25px;
+    }
+
+    .footer-img img {
+        max-width: 300px;
+        /* más pequeño en móviles si lo deseas */
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+
 }
