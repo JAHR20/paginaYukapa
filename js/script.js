@@ -114,8 +114,7 @@ var typed = new Typed('#typed', {
 });
 
 
-// js/script.js
-const correoBtn = document.getElementById('correo-btn');
+const correoBtn = document.getElementById('btn-pedido');
 const esMovil = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 if (correoBtn) {
