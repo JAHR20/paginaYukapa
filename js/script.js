@@ -119,9 +119,9 @@ const esMovil = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 if (correoBtn) {
   if (esMovil) {
-    correoBtn.href = "mailto:bioyucapa@gmail.com";
+    correoBtn.href = "mailto:bioyukapa@gmail.com";
   } else {
-    correoBtn.href = "https://mail.google.com/mail/?view=cm&to=bioyucapa@gmail.com";
+    correoBtn.href = "https://mail.google.com/mail/?view=cm&to=bioyukapa@gmail.com";
     correoBtn.target = "_blank";
   }
 }

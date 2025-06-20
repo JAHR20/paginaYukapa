@@ -700,12 +700,16 @@ section {
         order: 2;
     }
 
-    /* Navbar móvil */
     .navbar {
         position: absolute;
         width: 100%;
         height: 100vh;
-        background: #0eb9d7;
+        background: rgba(255, 255, 255, 0.1);
+        /* Fondo translúcido */
+        backdrop-filter: blur(10px);
+        /* Desenfoque de fondo */
+        -webkit-backdrop-filter: blur(10px);
+        /* Soporte para Safari */
         padding: 40px 30px;
         top: 0;
         left: 100%;
@@ -714,6 +718,7 @@ section {
         transition: 0.5s ease all;
         z-index: 999;
     }
+
 
     .navbar.open {
         left: 0;
@@ -744,20 +749,20 @@ section {
         font-size: 30px;
 
     }
-    
+
     .social-mobile a {
         color: rgb(175, 91, 201);
         font-size: 30px;
-        
+
     }
-    
+
 
     .social-mobile a:active i {
         color: var(--hover-color);
         transform: translateY(-3px);
     }
 
-    
+
 
     /* Ajustes de fuentes */
     :root {
