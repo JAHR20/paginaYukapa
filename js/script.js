@@ -38,6 +38,11 @@ document.querySelectorAll('.navbar a[href^="#"]').forEach(function(enlace){
     })
 })
 
+
+
+
+
+
 const imagenesJahr = [
   "img/imginicio1.webp",
   "img/imginicio2.webp",
@@ -88,6 +93,7 @@ let enlacesjahr = document.querySelectorAll('.navbar a');
 menujahr.onclick = () => {
     navbarjahr.classList.toggle('open')
     menujahr.classList.toggle('bx-x')
+
 }
 
 enlacesjahr.forEach(link => {

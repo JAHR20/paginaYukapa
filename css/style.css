@@ -644,7 +644,7 @@ section {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 10px;
+        padding: 0px 10px;
     }
 
     .logo {
@@ -666,6 +666,10 @@ section {
     /* Ocultamos las redes dentro del header */
     .h-derecha>a,
     .h-derecha>i {
+        display: none;
+    }
+
+    .h-derecha {
         display: none;
     }
 
@@ -701,15 +705,10 @@ section {
     }
 
     .navbar {
-        position: absolute;
+        position: fixed;
         width: 100%;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.1);
-        /* Fondo translúcido */
-        backdrop-filter: blur(10px);
-        /* Desenfoque de fondo */
-        -webkit-backdrop-filter: blur(10px);
-        /* Soporte para Safari */
+        height: 100dvh;
+        background: rgba(0, 0, 0, 0.9);
         padding: 40px 30px;
         top: 0;
         left: 100%;
@@ -784,7 +783,7 @@ section {
     /* Layouts en una sola columna */
     .col-content-jahr,
     .col-content2-jahr,
-    .footer-Jahr {
+    .footer-jahr {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -832,6 +831,7 @@ section {
         margin: 0 auto;
         /* centrarlo horizontalmente */
         padding: 40px 20px;
+        padding-top: 90px;
         box-sizing: border-box;
         background-color: white;
         /* si quieres que el fondo sea blanco */
@@ -879,6 +879,7 @@ section {
         grid-template-columns: 1fr;
         /* 👉 una sola columna */
         gap: 2rem;
+        padding-top: 38px;
     }
 
     .carousel-container {
@@ -918,6 +919,46 @@ section {
         max-width: 300px;
         /* más pequeño en móviles si lo deseas */
     }
+
+    .footer-jahr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .footer-contact-group {
+        width: 100%;
+    }
+
+    .footer-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-contact-columns {
+        display: flex;
+        flex-direction: column;
+        /* 🔁 esto acomoda en una columna */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+        text-decoration: none;
+        color: #fffefe;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
 
     html,
     body {
