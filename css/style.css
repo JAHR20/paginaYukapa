@@ -1077,51 +1077,61 @@ section {
 
     .carousel-container {
         width: 100%;
-        max-width: 550px;
-        height: 380px;
-        margin: 10px auto;
-        perspective: 1300px;
+        max-width: 650px;
+        height: 450px;
+        margin: 40px auto;
+        perspective: 1400px;
     }
 
     .carousel-images {
-        transform: translateZ(-340px);
+        transform: translateZ(-300px);
     }
 
     .carousel-images img {
-        width: 420px;
-        height: 300px;
-        left: calc(50% - 210px);
-        top: 40px;
+        width: 450px;
+        height: 320px;
+        left: calc(50% - 225px);
+        top: 65px;
     }
 
     .carousel-images img:nth-child(1) {
-        transform: rotateY(0deg) translateZ(340px);
+        transform: rotateY(0deg) translateZ(300px);
     }
 
     .carousel-images img:nth-child(2) {
-        transform: rotateY(72deg) translateZ(340px);
+        transform: rotateY(72deg) translateZ(300px);
     }
 
     .carousel-images img:nth-child(3) {
-        transform: rotateY(144deg) translateZ(340px);
+        transform: rotateY(144deg) translateZ(300px);
     }
 
     .carousel-images img:nth-child(4) {
-        transform: rotateY(216deg) translateZ(340px);
+        transform: rotateY(216deg) translateZ(300px);
     }
 
     .carousel-images img:nth-child(5) {
-        transform: rotateY(288deg) translateZ(340px);
+        transform: rotateY(288deg) translateZ(300px);
     }
 
     @keyframes rotateInY {
         0% {
-            transform: translateZ(-340px) rotateY(0deg);
+            transform: translateZ(-300px) rotateY(0deg);
         }
 
         100% {
-            transform: translateZ(-340px) rotateY(360deg);
+            transform: translateZ(-300px) rotateY(360deg);
         }
+    }
+
+    .carousel-controls button {
+        width: 55px; 
+        height: 55px;
+        font-size: 1.6rem;
+        transform: translateZ(100px);
+    }
+    .carousel-controls button:hover {
+        transform: translateZ(120px) scale(1.1);
     }
 
     .product-info h2 {
