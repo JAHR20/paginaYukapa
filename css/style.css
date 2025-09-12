@@ -1064,6 +1064,11 @@ section {
         display: block;
     }
 
+     #Producto {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     .product-container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1074,48 +1079,48 @@ section {
         width: 100%;
         max-width: 550px;
         height: 380px;
-        margin: 40px auto;
+        margin: 10px auto;
         perspective: 1300px;
     }
 
     .carousel-images {
-        transform: translateZ(-280px);
+        transform: translateZ(-340px);
     }
 
     .carousel-images img {
-        width: 350px;
-        height: 250px;
-        left: calc(50% - 175px);
-        top: 65px;
+        width: 420px;
+        height: 300px;
+        left: calc(50% - 210px);
+        top: 40px;
     }
 
     .carousel-images img:nth-child(1) {
-        transform: rotateY(0deg) translateZ(280px);
+        transform: rotateY(0deg) translateZ(340px);
     }
 
     .carousel-images img:nth-child(2) {
-        transform: rotateY(72deg) translateZ(280px);
+        transform: rotateY(72deg) translateZ(340px);
     }
 
     .carousel-images img:nth-child(3) {
-        transform: rotateY(144deg) translateZ(280px);
+        transform: rotateY(144deg) translateZ(340px);
     }
 
     .carousel-images img:nth-child(4) {
-        transform: rotateY(216deg) translateZ(280px);
+        transform: rotateY(216deg) translateZ(340px);
     }
 
     .carousel-images img:nth-child(5) {
-        transform: rotateY(288deg) translateZ(280px);
+        transform: rotateY(288deg) translateZ(340px);
     }
 
     @keyframes rotateInY {
         0% {
-            transform: translateZ(-280px) rotateY(0deg);
+            transform: translateZ(-340px) rotateY(0deg);
         }
 
         100% {
-            transform: translateZ(-280px) rotateY(360deg);
+            transform: translateZ(-340px) rotateY(360deg);
         }
     }
 
