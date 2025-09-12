@@ -15,13 +15,9 @@
 
 :root {
     --text-color: #f1efef;
-    /* Gris muy oscuro (casi negro elegante) */
     --bg-color: #98b4f3;
-    /* Azul cielo muy claro, casi blanco */
-    --main-color: #2563eb;
-    /* Azul brillante pero profesional */
-    --hover-color: #1d4ed8;
-    /* Azul más intenso para hover */
+    --main-color: #097110;
+    --hover-color: #ffb804;
     --p-font: 1.5rem;
     --h2-font: 3rem;
     --h1-font: 4rem;
@@ -72,14 +68,15 @@ header.sticky {
 }
 
 .logo-img {
-    width: 130px;
-    /* o el tamaño que desees */
+    width: 120px;
     height: auto;
-    margin-right: 10px;
-    margin-left: 40px;
-    margin-top: 8px;
+    margin: 0 10px 0 20px;
     border-radius: 50%;
+
+    animation: brillo-solar-intermedio 3.5s infinite linear;
 }
+
+
 
 span {
     color: var(--text-color);
@@ -90,7 +87,7 @@ span {
 }
 
 .navbar a {
-    color: rgb(175, 91, 201);
+    color: #08c715;
     margin: 15px 20px;
     padding: 10px;
     font-size: 17px;
@@ -103,7 +100,7 @@ div a {
 
 .navbar a:hover {
     color: var(--hover-color);
-    border-bottom: 2px solid #4095ac;
+    border-bottom: 2px solid #ffce51;
 }
 
 .h-derecha {
@@ -112,7 +109,7 @@ div a {
 }
 
 .h-derecha a:first-child {
-    color: rgb(175, 91, 201);
+    color: #08c715;
     font-size: 17px;
     font-weight: bold;
     margin-right: 20px;
@@ -121,7 +118,7 @@ div a {
 .h-derecha a {
     vertical-align: middle;
     font-size: 30px;
-    color: rgb(175, 91, 201);
+    color: #08c715;
     margin-right: 18px;
     margin-left: 5px;
     transition: 0.5s ease all;
@@ -171,11 +168,8 @@ section {
 
 .bg1 {
     opacity: 1;
-    /* la que se muestra inicialmente */
     z-index: 1;
 }
-
-
 
 .home-text-JAHR {
     position: relative;
@@ -203,7 +197,7 @@ section {
 .home-text-JAHR h5 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #01c8ffab;
+    color: #f9a71b;
     text-transform: uppercase;
     letter-spacing: 10px;
     font-weight: bold;
@@ -227,6 +221,10 @@ section {
     border: 2px solid var(--main-color);
     transform: translateX(10px);
 
+}
+
+#acerca h2 {
+    color: #b67911;
 }
 
 .col-content-jahr {
@@ -278,9 +276,11 @@ section {
     gap: 3rem;
     padding: 70px 15% 60px;
     background: #f8fafc;
-    /* color claro de fondo opcional */
     color: #111827;
-    /* texto más oscuro */
+}
+
+#Producto h2 {
+    color: #b67911;
 }
 
 .row-img-j {
@@ -323,7 +323,7 @@ section {
     padding: 13px 40px;
     margin-left: 10px;
     background: var(--main-color);
-    color: var(--text-colorr);
+    color: var(--text-color);
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
@@ -334,8 +334,9 @@ section {
 
 .btn2:hover {
     background: transparent;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--main-color);
     transform: translateX(10px);
+    color: black;
 }
 
 .footer-jahr {
@@ -350,13 +351,9 @@ section {
 
 .footer-img img {
     height: 200px;
-    /* altura fija */
     width: 400px;
-    /* ancho fijo */
     object-fit: cover;
-    /* cubre el contenedor recortando la imagen */
     object-position: center 65%;
-    /* centra la parte visible */
     border-radius: 10px;
 }
 
@@ -417,7 +414,6 @@ section {
 #typed-container {
     display: inline-block;
     min-height: 24px;
-    /* Ajusta según el tamaño de tu h5 */
     white-space: nowrap;
 }
 
@@ -427,7 +423,7 @@ section {
     animation: blink 1s infinite;
 }
 
-/* Opcional: reduce el efecto visual del parpadeo */
+
 @keyframes blink {
 
     0%,
@@ -442,7 +438,6 @@ section {
 
 .home-text-JAHR h5 {
     margin-bottom: 10px;
-    /* o el valor que uses */
     line-height: 1.2;
 }
 
@@ -455,10 +450,9 @@ section {
 
 #typed:empty::after {
     content: '\00a0';
-    /* Espacio no separable */
+    
 }
 
-/* Sección redes para móvil */
 .social-mobile {
     display: none;
 
@@ -508,7 +502,6 @@ section {
     width: 100%;
     height: 100%;
     max-height: 650px;
-    /* Ajusta a lo que necesites */
     object-fit: cover;
     object-position: top;
     border-radius: 10px;
@@ -523,7 +516,7 @@ section {
     border-radius: 20px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     height: 350px;
-    /* 👈 reduce el alto aquí */
+    background: transparent;
 }
 
 .product-container {
@@ -539,53 +532,268 @@ section {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+
+
+/* Carrusel*/
+.carousel-container {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    margin: 50px auto;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    perspective: 1500px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    
+}
+
+/* Carrusel 3D - espacio tridimensional */
 .carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-images img {
     width: 100%;
-    height: auto;
-    display: none;
-    border-radius: 20px;
+    height: 100%;
+    position: absolute;
+    transform: translateZ(-350px);
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.4, 0.02, 0.1, 1);
 }
 
-.carousel-images img.active {
+/* Estilos para cada imagen del carrusel */
+.carousel-images img {
     display: block;
+    position: absolute;
+    width: 380px;
+    height: 280px;
+    left: 110px;
+    top: 60px;
+    margin: 0;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 20px 30px rgba(0, 0, 0, 0.35);
+    transition: all 0.5s ease;
 }
 
+.carousel-images img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-images img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+    opacity: 0;
+    border-radius: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-images img:hover::after {
+    opacity: 1;
+}
+
+/* Posicionamiento cilíndrico - 5 imágenes */
+.carousel-images img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(350px);
+}
+
+.carousel-images img:nth-child(2) {
+    transform: rotateY(72deg) translateZ(350px);
+}
+
+.carousel-images img:nth-child(3) {
+    transform: rotateY(144deg) translateZ(350px);
+}
+
+.carousel-images img:nth-child(4) {
+    transform: rotateY(216deg) translateZ(350px);
+}
+
+.carousel-images img:nth-child(5) {
+    transform: rotateY(288deg) translateZ(350px);
+}
+
+/* Controles de navegación */
 .carousel-controls {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
-    top: 45%;
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
+    pointer-events: none;
+    z-index: 10;
 }
 
 .carousel-controls button {
-    background: rgba(0, 0, 0, 0.4);
-    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    transition: 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: all;
+    transform: translateZ(100px);
+    position: relative;
+    margin: 0 -25px;
+    opacity: 0.7;
 }
 
 .carousel-controls button:hover {
-    background: rgba(0, 0, 0, 0.7);
+    transform: translateZ(120px) scale(1.1);
+    /* ANTES: 70px */
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
+.carousel-controls button:active {
+    transform: translateZ(110px) scale(0.95);
+}
+
+@keyframes rotateInY {
+    0% {
+        transform: translateZ(-350px) rotateY(0deg);
+    }
+
+    100% {
+        transform: translateZ(-350px) rotateY(360deg);
+    }
+}
+
+.rotate-animation {
+    animation: rotateInY 12s infinite linear;
+}
+
+.rotate-fast {
+    animation: rotateInY 6s infinite linear;
+}
+
+.rotate-slow {
+    animation: rotateInY 20s infinite linear;
+}
+
+.animation-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.animation-controls button {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.animation-controls button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.animation-controls button.active {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+
+/* Para Pantallas de (hasta 992px) */
+@media (max-width: 992px) {
+    
+}
+
+
+/* Para móviles grandes y tablets en vertical (hasta 768px) */
+@media (max-width: 768px) {
+    .carousel-container {
+        max-width: 450px;
+        height: 300px;
+        /* Altura ajustada, antes era 300px pero partiendo de un tamaño mayor */
+        perspective: 1200px;
+    }
+
+    .carousel-images {
+        transform: translateZ(-220px);
+    }
+
+    .carousel-images img {
+        width: 280px;
+        height: 180px;
+        left: calc(50% - 140px);
+        top: 60px;
+        /* (300 - 180) / 2 */
+    }
+
+    .carousel-images img:nth-child(1) {
+        transform: rotateY(0deg) translateZ(220px);
+    }
+
+    .carousel-images img:nth-child(2) {
+        transform: rotateY(72deg) translateZ(220px);
+    }
+
+    .carousel-images img:nth-child(3) {
+        transform: rotateY(144deg) translateZ(220px);
+    }
+
+    .carousel-images img:nth-child(4) {
+        transform: rotateY(216deg) translateZ(220px);
+    }
+
+    .carousel-images img:nth-child(5) {
+        transform: rotateY(288deg) translateZ(220px);
+    }
+
+    .carousel-controls button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin: 0 -15px;
+        transform: translateZ(80px);
+    }
+
+    @keyframes rotateInY {
+        0% {
+            transform: translateZ(-220px) rotateY(0deg);
+        }
+
+        100% {
+            transform: translateZ(-220px) rotateY(360deg);
+        }
+    }
 }
 
 .product-section {
     padding: 70px 15% 60px;
     background: #f8fafc;
-    /* color claro de fondo opcional */
     color: #111827;
-    /* texto más oscuro */
 }
 
 .product-container {
@@ -660,10 +868,8 @@ section {
 
     .social-mobile a:first-child {
         font-size: 20px;
-        /* o 12px si lo quieres más pequeño */
     }
 
-    /* Ocultamos las redes dentro del header */
     .h-derecha>a,
     .h-derecha>i {
         display: none;
@@ -676,14 +882,13 @@ section {
     #menu-icon {
         display: block;
         font-size: 30px;
-        color: rgb(175, 91, 201);
+        color: #08c715;
         cursor: pointer;
     }
 
     #typed {
         display: block;
         min-height: 5em;
-        /* o altura en px como 80px, ajusta según tus frases */
         overflow: hidden;
     }
 
@@ -744,13 +949,13 @@ section {
     }
 
     .social-mobile a i {
-        color: rgb(175, 91, 201);
+        color: #08c715;
         font-size: 30px;
 
     }
 
     .social-mobile a {
-        color: rgb(175, 91, 201);
+        color: #08c715;
         font-size: 30px;
 
     }
@@ -761,26 +966,20 @@ section {
         transform: translateY(-3px);
     }
 
-
-
-    /* Ajustes de fuentes */
     :root {
         --p-font: 1rem;
         --h2-font: 1.5rem;
         --h1-font: 2rem;
     }
 
-    /* Espaciado de secciones */
     section {
         padding: 45px 5% 35px;
     }
 
-    /* Header comprimido */
     header.sticky {
         padding: 7px 5%;
     }
 
-    /* Layouts en una sola columna */
     .col-content-jahr,
     .col-content2-jahr,
     .footer-jahr {
@@ -788,7 +987,6 @@ section {
         gap: 2rem;
     }
 
-    /* Imágenes adaptadas */
     .row-img,
     .row-img-j {
         width: 100%;
@@ -803,7 +1001,6 @@ section {
         border-radius: 20px;
     }
 
-    /* Texto centrado en home */
     .home-text-JAHR {
         padding: 0 5vw;
         text-align: center;
@@ -815,7 +1012,6 @@ section {
         text-align: left;
     }
 
-    /* Botones adaptativos */
     .btn,
     .btn2 {
         width: 100%;
@@ -827,14 +1023,11 @@ section {
     .about-section {
         width: 100%;
         max-width: 800px;
-        /* o el ancho que quieras */
         margin: 0 auto;
-        /* centrarlo horizontalmente */
         padding: 40px 20px;
         padding-top: 90px;
         box-sizing: border-box;
         background-color: white;
-        /* si quieres que el fondo sea blanco */
     }
 
     .about-container {
@@ -842,16 +1035,13 @@ section {
         flex-wrap: wrap;
         gap: 20px;
         max-width: 100%;
-        /* evita overflow */
         overflow-x: hidden;
     }
 
     .about-text,
     .about-image {
         flex: 1 1 100%;
-        /* que ocupen todo el ancho */
         max-width: 100%;
-        /* limita ancho máximo */
         box-sizing: border-box;
     }
 
@@ -862,7 +1052,6 @@ section {
         max-width: 100%;
         box-sizing: border-box;
         word-wrap: break-word;
-        /* para evitar que texto largo cause overflow */
     }
 
     .about-image img {
@@ -877,24 +1066,61 @@ section {
 
     .product-container {
         grid-template-columns: 1fr;
-        /* 👉 una sola columna */
         gap: 2rem;
         padding-top: 38px;
     }
 
     .carousel-container {
-        height: 100%;
-        /* reduce la altura del carrusel en móviles */
+        width: 100%;
+        max-width: 550px;
+        height: 380px;
+        margin: 40px auto;
+        perspective: 1300px;
     }
 
-    .carousel-controls {
-        top: 40%;
-        /* ajusta la posición de los botones */
+    .carousel-images {
+        transform: translateZ(-280px);
+    }
+
+    .carousel-images img {
+        width: 350px;
+        height: 250px;
+        left: calc(50% - 175px);
+        top: 65px;
+    }
+
+    .carousel-images img:nth-child(1) {
+        transform: rotateY(0deg) translateZ(280px);
+    }
+
+    .carousel-images img:nth-child(2) {
+        transform: rotateY(72deg) translateZ(280px);
+    }
+
+    .carousel-images img:nth-child(3) {
+        transform: rotateY(144deg) translateZ(280px);
+    }
+
+    .carousel-images img:nth-child(4) {
+        transform: rotateY(216deg) translateZ(280px);
+    }
+
+    .carousel-images img:nth-child(5) {
+        transform: rotateY(288deg) translateZ(280px);
+    }
+
+    @keyframes rotateInY {
+        0% {
+            transform: translateZ(-280px) rotateY(0deg);
+        }
+
+        100% {
+            transform: translateZ(-280px) rotateY(360deg);
+        }
     }
 
     .product-info h2 {
         font-size: 2rem;
-        /* texto más pequeño */
         text-align: center;
     }
 
@@ -917,7 +1143,6 @@ section {
 
     .footer-img img {
         max-width: 300px;
-        /* más pequeño en móviles si lo deseas */
     }
 
     .footer-jahr {
@@ -941,7 +1166,6 @@ section {
     .footer-contact-columns {
         display: flex;
         flex-direction: column;
-        /* 🔁 esto acomoda en una columna */
         gap: 10px;
         align-items: center;
     }
@@ -968,3 +1192,85 @@ section {
 
 
 }
+
+/* Para pantallas pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    .carousel-container {
+        max-width: 300px;
+        height: 200px;
+        perspective: 1000px;
+    }
+
+    .carousel-images {
+        transform: translateZ(-180px);
+    }
+
+    .carousel-images img {
+        width: 200px;
+        height: 140px;
+        left: calc(50% - 100px);
+        top: 30px;
+    }
+
+    .carousel-images img:nth-child(1) {
+        transform: rotateY(0deg) translateZ(180px);
+    }
+
+    .carousel-images img:nth-child(2) {
+        transform: rotateY(72deg) translateZ(180px);
+    }
+
+    .carousel-images img:nth-child(3) {
+        transform: rotateY(144deg) translateZ(180px);
+    }
+
+    .carousel-images img:nth-child(4) {
+        transform: rotateY(216deg) translateZ(180px);
+    }
+
+    .carousel-images img:nth-child(5) {
+        transform: rotateY(288deg) translateZ(180px);
+    }
+
+    .carousel-controls button {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        margin: 0 -10px;
+        transform: translateZ(60px);
+    }
+
+    @keyframes rotateInY {
+        0% {
+            transform: translateZ(-180px) rotateY(0deg);
+        }
+
+        100% {
+            transform: translateZ(-180px) rotateY(360deg);
+        }
+    }
+}
+
+@keyframes brillo-solar-intermedio {
+    0% {
+        box-shadow:
+            0 0 8px rgba(255, 255, 255, 0.8),
+            /* Capa interior (blanca y definida) */
+            0 0 15px rgba(255, 215, 0, 0.5);
+        /* Capa exterior (dorada y difusa) */
+    }
+
+    50% {
+        box-shadow:
+            0 0 18px rgba(255, 255, 255, 1),
+            0 0 35px rgba(255, 215, 0, 0.9);
+    }
+
+    100% {
+        box-shadow:
+            0 0 8px rgba(255, 255, 255, 0.8),
+            0 0 15px rgba(255, 215, 0, 0.5);
+    }
+}
+
+
