@@ -1107,43 +1107,43 @@ section {
     }
 
     .carousel-images {
-        transform: translateZ(-380px);  /* Ajustado */
+        transform: translateZ(-320px);
     }
 
     .carousel-images img {
-        width: 310px;  /* Reducido de 340px */
-        height: 210px;  /* Reducido de 230px */
-        left: calc(50% - 155px);
-        top: 45px;  /* (300 - 210) / 2 */
+        width: 280px;  /* Reducido de 310px */
+        height: 190px;  /* Reducido de 210px */
+        left: calc(50% - 140px);
+        top: 55px;  /* (300 - 190) / 2 */
     }
 
-    /* Radio ajustado a 380px */
+    /* Radio ajustado a 320px */
     .carousel-images img:nth-child(1) {
-        transform: rotateY(0deg) translateZ(380px);
+        transform: rotateY(0deg) translateZ(320px);
     }
 
     .carousel-images img:nth-child(2) {
-        transform: rotateY(51.43deg) translateZ(380px);
+        transform: rotateY(51.43deg) translateZ(320px);
     }
 
     .carousel-images img:nth-child(3) {
-        transform: rotateY(102.86deg) translateZ(380px);
+        transform: rotateY(102.86deg) translateZ(320px);
     }
 
     .carousel-images img:nth-child(4) {
-        transform: rotateY(154.29deg) translateZ(380px);
+        transform: rotateY(154.29deg) translateZ(320px);
     }
 
     .carousel-images img:nth-child(5) {
-        transform: rotateY(205.72deg) translateZ(380px);
+        transform: rotateY(205.72deg) translateZ(320px);
     }
 
     .carousel-images img:nth-child(6) {
-        transform: rotateY(257.15deg) translateZ(380px);
+        transform: rotateY(257.15deg) translateZ(320px);
     }
 
     .carousel-images img:nth-child(7) {
-        transform: rotateY(308.58deg) translateZ(380px);
+        transform: rotateY(308.58deg) translateZ(320px);
     }
 
     .carousel-controls button {
@@ -1160,10 +1160,10 @@ section {
 
     @keyframes rotateInY {
         0% {
-            transform: translateZ(-380px) rotateY(0deg);
+            transform: translateZ(-320px) rotateY(0deg);
         }
         100% {
-            transform: translateZ(-380px) rotateY(360deg);
+            transform: translateZ(-320px) rotateY(360deg);
         }
     }
 
