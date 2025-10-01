@@ -557,7 +557,7 @@ section {
     width: 100%;
     height: 100%;
     position: absolute;
-    transform: translateZ(-350px);
+    transform: translateZ(-450px);
     transform-style: preserve-3d;
     transition: transform 1s cubic-bezier(0.4, 0.02, 0.1, 1);
 }
@@ -600,25 +600,33 @@ section {
     opacity: 1;
 }
 
-/* Posicionamiento cilíndrico - 5 imágenes */
+/* Posicionamiento cilíndrico - 7 imágenes con más espacio */
 .carousel-images img:nth-child(1) {
-    transform: rotateY(0deg) translateZ(350px);
+    transform: rotateY(0deg) translateZ(450px);
 }
 
 .carousel-images img:nth-child(2) {
-    transform: rotateY(72deg) translateZ(350px);
+    transform: rotateY(51.43deg) translateZ(450px);
 }
 
 .carousel-images img:nth-child(3) {
-    transform: rotateY(144deg) translateZ(350px);
+    transform: rotateY(102.86deg) translateZ(450px);
 }
 
 .carousel-images img:nth-child(4) {
-    transform: rotateY(216deg) translateZ(350px);
+    transform: rotateY(154.29deg) translateZ(450px);
 }
 
 .carousel-images img:nth-child(5) {
-    transform: rotateY(288deg) translateZ(350px);
+    transform: rotateY(205.72deg) translateZ(450px);
+}
+
+.carousel-images img:nth-child(6) {
+    transform: rotateY(257.15deg) translateZ(450px);
+}
+
+.carousel-images img:nth-child(7) {
+    transform: rotateY(308.58deg) translateZ(450px);
 }
 
 /* Controles de navegación */
@@ -732,60 +740,77 @@ section {
 
 /* Para móviles grandes y tablets en vertical (hasta 768px) */
 @media (max-width: 768px) {
+    
+}
+
+/* Para móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
     .carousel-container {
-        max-width: 450px;
-        height: 300px;
-        /* Altura ajustada, antes era 300px pero partiendo de un tamaño mayor */
-        perspective: 1200px;
+        max-width: 100%;
+        width: 90%;
+        height: 220px;
+        perspective: 1000px;
+        margin: 30px auto;
     }
 
     .carousel-images {
-        transform: translateZ(-220px);
+        transform: translateZ(-240px);
     }
 
     .carousel-images img {
-        width: 280px;
-        height: 180px;
-        left: calc(50% - 140px);
-        top: 60px;
-        /* (300 - 180) / 2 */
+        width: 220px;
+        height: 150px;
+        left: calc(50% - 110px);
+        top: 35px;
     }
 
+    /* TODAS con el MISMO translateZ de 240px */
     .carousel-images img:nth-child(1) {
-        transform: rotateY(0deg) translateZ(220px);
+        transform: rotateY(0deg) translateZ(240px);
     }
 
     .carousel-images img:nth-child(2) {
-        transform: rotateY(72deg) translateZ(220px);
+        transform: rotateY(51.43deg) translateZ(240px);
     }
 
     .carousel-images img:nth-child(3) {
-        transform: rotateY(144deg) translateZ(220px);
+        transform: rotateY(102.86deg) translateZ(240px);
     }
 
     .carousel-images img:nth-child(4) {
-        transform: rotateY(216deg) translateZ(220px);
+        transform: rotateY(154.29deg) translateZ(240px);
     }
 
     .carousel-images img:nth-child(5) {
-        transform: rotateY(288deg) translateZ(220px);
+        transform: rotateY(205.72deg) translateZ(240px);
+    }
+
+    .carousel-images img:nth-child(6) {
+        transform: rotateY(257.15deg) translateZ(240px);
+    }
+
+    .carousel-images img:nth-child(7) {
+        transform: rotateY(308.58deg) translateZ(240px);
     }
 
     .carousel-controls button {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-        margin: 0 -15px;
-        transform: translateZ(80px);
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        margin: 0 -10px;
+        transform: translateZ(60px);
+    }
+
+    .carousel-controls button:hover {
+        transform: translateZ(70px) scale(1.05);
     }
 
     @keyframes rotateInY {
         0% {
-            transform: translateZ(-220px) rotateY(0deg);
+            transform: translateZ(-240px) rotateY(0deg);
         }
-
         100% {
-            transform: translateZ(-220px) rotateY(360deg);
+            transform: translateZ(-240px) rotateY(360deg);
         }
     }
 }
@@ -1064,7 +1089,7 @@ section {
         display: block;
     }
 
-     #Producto {
+    #Producto {
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -1076,62 +1101,70 @@ section {
     }
 
     .carousel-container {
-        width: 100%;
-        max-width: 650px;
-        height: 450px;
-        margin: 40px auto;
-        perspective: 1400px;
+        max-width: 450px;
+        height: 300px;
+        perspective: 1200px;
     }
 
     .carousel-images {
-        transform: translateZ(-300px);
+        transform: translateZ(-420px);  
     }
 
     .carousel-images img {
-        width: 450px;
-        height: 320px;
-        left: calc(50% - 225px);
-        top: 65px;
+        width: 340px;
+        height: 230px;
+        left: calc(50% - 170px);
+        top: 35px;
     }
 
+    
     .carousel-images img:nth-child(1) {
-        transform: rotateY(0deg) translateZ(300px);
+        transform: rotateY(0deg) translateZ(420px);
     }
 
     .carousel-images img:nth-child(2) {
-        transform: rotateY(72deg) translateZ(300px);
+        transform: rotateY(51.43deg) translateZ(420px);
     }
 
     .carousel-images img:nth-child(3) {
-        transform: rotateY(144deg) translateZ(300px);
+        transform: rotateY(102.86deg) translateZ(420px);
     }
 
     .carousel-images img:nth-child(4) {
-        transform: rotateY(216deg) translateZ(300px);
+        transform: rotateY(154.29deg) translateZ(420px);
     }
 
     .carousel-images img:nth-child(5) {
-        transform: rotateY(288deg) translateZ(300px);
+        transform: rotateY(205.72deg) translateZ(420px);
+    }
+
+    .carousel-images img:nth-child(6) {
+        transform: rotateY(257.15deg) translateZ(420px);
+    }
+
+    .carousel-images img:nth-child(7) {
+        transform: rotateY(308.58deg) translateZ(420px);
+    }
+
+    .carousel-controls button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin: 0 -15px;
+        transform: translateZ(80px);
+    }
+
+    .carousel-controls button:hover {
+        transform: translateZ(90px) scale(1.1);
     }
 
     @keyframes rotateInY {
         0% {
-            transform: translateZ(-300px) rotateY(0deg);
+            transform: translateZ(-420px) rotateY(0deg);
         }
-
         100% {
-            transform: translateZ(-300px) rotateY(360deg);
+            transform: translateZ(-420px) rotateY(360deg);
         }
-    }
-
-    .carousel-controls button {
-        width: 55px; 
-        height: 55px;
-        font-size: 1.6rem;
-        transform: translateZ(100px);
-    }
-    .carousel-controls button:hover {
-        transform: translateZ(120px) scale(1.1);
     }
 
     .product-info h2 {
